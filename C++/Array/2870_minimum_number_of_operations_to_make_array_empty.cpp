@@ -17,6 +17,9 @@ using namespace std;
  *      - Prefer removing elements in groups of 3.
  *      - If there are leftover elements (not divisible by 3), use one extra
  * operation to remove them in groups of 2.
+ *
+ * Time complexity: O(n)
+ * Space complexity: O(n)
  */
 
 int minOperations(vector<int>& nums) {

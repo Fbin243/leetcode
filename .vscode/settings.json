@@ -6,6 +6,9 @@
     "vector": "cpp",
     "array": "cpp",
     "string_view": "cpp",
-    "stacktrace": "cpp"
+    "stacktrace": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "span": "cpp"
   }
 }
