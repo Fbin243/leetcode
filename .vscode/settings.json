@@ -3,6 +3,9 @@
     "*.sqlbook": "sql",
     "*.ndjson": "jsonl",
     "*.dbclient-js": "javascript",
-    "vector": "cpp"
+    "vector": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "stacktrace": "cpp"
   }
 }
