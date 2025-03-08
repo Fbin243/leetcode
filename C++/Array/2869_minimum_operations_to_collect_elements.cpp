@@ -47,26 +47,36 @@ int minOperations1(vector<int>& nums, int k) {
  */
 
 int minOperations2(vector<int>& nums, int k) {
-    uint64_t cond = 0;
-    uint64_t num = 0;
-    uint64_t count = 0;
+    long long cond = 0;
+    long long num = 0;
+    long long count = 0;
 
     // Create the condition mask with k bits set to 1
-    for (int i = 0; i < k; i++) {
-        cond = (cond << 1) | 1;
-    }
+    // for (int i = 0; i < k; i++) {
+    //     cond = (cond << 1) | 1;
+    // }
+    //
+
+    // Instead of for loop, we can
+    cond = (1LL << k) - 1;
 
     // Process elements from the back of nums
-    while ((num & cond) != cond) {
-        int last_ele = nums.back();
-        nums.pop_back();
+    // while ((num & cond) != cond) {
+    //     int last_ele = nums.back();
+    //     nums.pop_back();
 
-        // Set the corresponding bit in num
-        num |= ((uint64_t)1 << (last_ele - 1));
+    //     num |= (1LL << (last_ele - 1));
+    //     count++;
+    // }
+
+    // We can do better than while loop (don't need last_ele variable)
+    for (int i = nums.size() - 1; i >= 0; i--) {
+        num |= (1LL << (nums[i] - 1));
         count++;
+        if ((num & cond) == cond) return count;
     }
 
-    return count;
+    return -1;
 }
 
 int main() {
