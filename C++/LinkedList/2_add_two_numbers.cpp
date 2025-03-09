@@ -49,19 +49,9 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     return result;
 }
 
-ListNode* createList(const std::vector<int>& nums) {
-    ListNode dummy(0);
-    ListNode* curr = &dummy;
-    for (int num : nums) {
-        curr->next = new ListNode(num);
-        curr = curr->next;
-    }
-    return dummy.next;
-}
-
 int main() {
-    ListNode* l1 = createList({9, 9, 9, 9, 9, 9, 9});
-    ListNode* l2 = createList({9, 9, 9, 9});
+    ListNode* l1 = CreateList({9, 9, 9, 9, 9, 9, 9});
+    ListNode* l2 = CreateList({9, 9, 9, 9});
     ListNode* result = addTwoNumbers(l1, l2);
 
     PrintList(result);
