@@ -9,6 +9,7 @@
     "stacktrace": "cpp",
     "deque": "cpp",
     "list": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "iomanip": "cpp"
   }
 }
