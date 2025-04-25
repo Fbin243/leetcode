@@ -26,21 +26,21 @@ using namespace std;
  */
 
 ListNode* rotateRight(ListNode* head, int k) {
-    if (!head || !head->next) return head;
-    ListNode* tail = head;
-    int n = 1;
-    while (tail->next) {
-        tail = tail->next;
-        n++;
-    }
-    int i = 0;
-    k = k % n;
-    while (i++ < n - k) {
-        tail->next = head;
-        head = head->next;
-        tail = tail->next;
-        tail->next = nullptr;
-    }
+  if (!head || !head->next) return head;
+  ListNode* tail = head;
+  int n = 1;
+  while (tail->next) {
+    tail = tail->next;
+    n++;
+  }
+  int i = 0;
+  k = k % n;
+  while (i++ < n - k) {
+    tail->next = head;
+    head = head->next;
+    tail = tail->next;
+    tail->next = nullptr;
+  }
 
-    return head;
+  return head;
 }

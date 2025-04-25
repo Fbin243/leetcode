@@ -21,28 +21,28 @@ using namespace std;
  */
 
 bool checkPair(char c1, char c2) {
-    if (c1 == ')') return c2 == '(';
-    if (c1 == ']') return c2 == '[';
-    if (c1 == '}') return c2 == '{';
-    return false;
+  if (c1 == ')') return c2 == '(';
+  if (c1 == ']') return c2 == '[';
+  if (c1 == '}') return c2 == '{';
+  return false;
 }
 
 bool isValid(string s) {
-    stack<char> st;
-    for (char c : s) {
-        if (c == ')' || c == ']' || c == '}') {
-            if (st.empty()) return false;
-            if (!checkPair(c, st.top())) return false;
-            st.pop();
-        } else {
-            st.push(c);
-        }
+  stack<char> st;
+  for (char c : s) {
+    if (c == ')' || c == ']' || c == '}') {
+      if (st.empty()) return false;
+      if (!checkPair(c, st.top())) return false;
+      st.pop();
+    } else {
+      st.push(c);
     }
+  }
 
-    return st.empty();
+  return st.empty();
 }
 
 int main() {
-    cout << "Result: " << isValid("{}[]()");
-    return 0;
+  cout << "Result: " << isValid("{}[]()");
+  return 0;
 }

@@ -25,30 +25,30 @@ using namespace std;
  */
 
 ListNode* removeNthFromEnd(ListNode* head, int n) {
-    ListNode* dummy = new ListNode(0);
-    dummy->next = head;
-    ListNode* res = dummy;
+  ListNode* dummy = new ListNode(0);
+  dummy->next = head;
+  ListNode* res = dummy;
 
-    while (n--) {
-        head = head->next;
-    }
+  while (n--) {
+    head = head->next;
+  }
 
-    while (head) {
-        head = head->next;
-        dummy = dummy->next;
-    }
+  while (head) {
+    head = head->next;
+    dummy = dummy->next;
+  }
 
-    ListNode* removeNode = dummy->next;
-    dummy->next = removeNode->next;
-    delete removeNode;
+  ListNode* removeNode = dummy->next;
+  dummy->next = removeNode->next;
+  delete removeNode;
 
-    return res->next;
+  return res->next;
 }
 
 int main() {
-    ListNode* head = CreateList({1, 2, 3, 4, 5});
-    int n = 2;
-    PrintList(removeNthFromEnd(head, n));
+  ListNode* head = CreateList({1, 2, 3, 4, 5});
+  int n = 2;
+  PrintList(removeNthFromEnd(head, n));
 
-    return 0;
+  return 0;
 }

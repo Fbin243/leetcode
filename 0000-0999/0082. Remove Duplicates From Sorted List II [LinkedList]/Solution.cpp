@@ -25,26 +25,26 @@ using namespace std;
  */
 
 ListNode* deleteDuplicates(ListNode* head) {
-    ListNode* res = new ListNode(-101);
-    ListNode* dummy = res;
-    ListNode* prev = res;
-    while (head) {
-        int nextVal = head->next ? head->next->val : -101;
-        if (head->val != prev->val && head->val != nextVal) {
-            res->next = head;
-            res = res->next;
-        }
-        prev = head;
-        head = head->next;
+  ListNode* res = new ListNode(-101);
+  ListNode* dummy = res;
+  ListNode* prev = res;
+  while (head) {
+    int nextVal = head->next ? head->next->val : -101;
+    if (head->val != prev->val && head->val != nextVal) {
+      res->next = head;
+      res = res->next;
     }
-    res->next = nullptr;
-    return dummy->next;
+    prev = head;
+    head = head->next;
+  }
+  res->next = nullptr;
+  return dummy->next;
 }
 
 int main() {
-    ListNode* head = CreateList({1, 2, 3, 3, 4, 4, 5});
-    int n = 2;
-    PrintList(deleteDuplicates(head));
+  ListNode* head = CreateList({1, 2, 3, 3, 4, 4, 5});
+  int n = 2;
+  PrintList(deleteDuplicates(head));
 
-    return 0;
+  return 0;
 }

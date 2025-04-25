@@ -27,34 +27,34 @@ using namespace std;
  */
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    ListNode* res = new ListNode(0);
-    ListNode* dummy = res;
-    int carry = 0;
+  ListNode* res = new ListNode(0);
+  ListNode* dummy = res;
+  int carry = 0;
 
-    while (l1 || l2 || carry) {
-        int val1 = l1 ? l1->val : 0;
-        int val2 = l2 ? l2->val : 0;
+  while (l1 || l2 || carry) {
+    int val1 = l1 ? l1->val : 0;
+    int val2 = l2 ? l2->val : 0;
 
-        int sum = val1 + val2 + carry;
-        res->next = new ListNode(sum % 10);
-        carry = sum / 10;
+    int sum = val1 + val2 + carry;
+    res->next = new ListNode(sum % 10);
+    carry = sum / 10;
 
-        l1 = l1 ? l1->next : nullptr;
-        l2 = l2 ? l2->next : nullptr;
-        res = res->next;
-    }
+    l1 = l1 ? l1->next : nullptr;
+    l2 = l2 ? l2->next : nullptr;
+    res = res->next;
+  }
 
-    ListNode* result = dummy->next;
-    delete dummy;
-    return result;
+  ListNode* result = dummy->next;
+  delete dummy;
+  return result;
 }
 
 int main() {
-    ListNode* l1 = CreateList({9, 9, 9, 9, 9, 9, 9});
-    ListNode* l2 = CreateList({9, 9, 9, 9});
-    ListNode* result = addTwoNumbers(l1, l2);
+  ListNode* l1 = CreateList({9, 9, 9, 9, 9, 9, 9});
+  ListNode* l2 = CreateList({9, 9, 9, 9});
+  ListNode* result = addTwoNumbers(l1, l2);
 
-    PrintList(result);
+  PrintList(result);
 
-    return 0;
+  return 0;
 }
