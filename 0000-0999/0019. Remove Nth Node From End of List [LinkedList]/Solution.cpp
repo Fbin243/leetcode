@@ -6,8 +6,6 @@
 
 #include <bits/stdc++.h>
 
-#include "linked_list.h"
-
 using namespace std;
 
 /**
@@ -23,6 +21,14 @@ using namespace std;
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
+
+struct ListNode {
+  int val;
+  ListNode* next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
 
 ListNode* removeNthFromEnd(ListNode* head, int n) {
   ListNode* dummy = new ListNode(0);
@@ -43,12 +49,4 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
   delete removeNode;
 
   return res->next;
-}
-
-int main() {
-  ListNode* head = CreateList({1, 2, 3, 4, 5});
-  int n = 2;
-  PrintList(removeNthFromEnd(head, n));
-
-  return 0;
 }
