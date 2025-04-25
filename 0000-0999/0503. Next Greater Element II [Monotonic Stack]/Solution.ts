@@ -4,7 +4,7 @@
  * Created at: 26/03/2025
  */
 
-function nextGreaterElements(nums: number[]) : number[] {
+function nextGreaterElements(nums: number[]): number[] {
   const n = nums.length;
   const res = new Array(n).fill(-1);
   const stack = [];
@@ -18,7 +18,7 @@ function nextGreaterElements(nums: number[]) : number[] {
 }
 
 function main() {
-  const nums = [ 1, 2, 3, 4, 3 ];
+  const nums = [1, 2, 3, 4, 3];
   const res = nextGreaterElements(nums);
   console.log(res);
 }
