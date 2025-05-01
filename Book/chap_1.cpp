@@ -4,7 +4,7 @@ using namespace std;
 /**
  * Time: O(n^3)
  */
-int thuat_toan_truc_tiep(vector<int>& nums) {
+int directAlgo(vector<int>& nums) {
   int n = nums.size();
   int maxSum = 0;
   for (int i = 0; i < n; i++) {
@@ -21,7 +21,7 @@ int thuat_toan_truc_tiep(vector<int>& nums) {
 /**
  * Time: O(n^2)
  */
-int thuat_toan_nhanh_hon(vector<int>& nums) {
+int fasterAlgo(vector<int>& nums) {
   int n = nums.size();
   int maxSum = 0;
   for (int i = 0; i < n; i++) {
@@ -60,11 +60,11 @@ int maxStartAt(vector<int>& nums, int i, int j) {
 /**
  * Time: O(nlogn)
  */
-int thuat_toan_de_quy(vector<int>& nums, int l, int r) {
+int recursiveAlgo(vector<int>& nums, int l, int r) {
   if (l == r) return nums[l];
   int m = l + (r - l) / 2;
-  int maxL = thuat_toan_de_quy(nums, l, m);
-  int maxR = thuat_toan_de_quy(nums, m + 1, r);
+  int maxL = recursiveAlgo(nums, l, m);
+  int maxR = recursiveAlgo(nums, m + 1, r);
   int maxM = maxEndAt(nums, l, m) + maxStartAt(nums, m + 1, r);
   return max(maxL, max(maxR, maxM));
 }
@@ -72,7 +72,7 @@ int thuat_toan_de_quy(vector<int>& nums, int l, int r) {
 /**
  * O(n)
  */
-int thuat_toan_quy_hoach_dong(vector<int>& nums) {
+int dynamicProgrammingAlgo(vector<int>& nums) {
   int maxS = nums[0];
   int maxE = nums[0];
   for (int i = 1; i < nums.size(); i++) {
@@ -81,15 +81,15 @@ int thuat_toan_quy_hoach_dong(vector<int>& nums) {
   }
 
   return maxS;
-}	
+}
 
 int main() {
   vector<int> nums = {-2, 11, -4, 13, -5, 2};
-  cout << "Thuat toan truc tiep: " << thuat_toan_truc_tiep(nums) << endl;
-  cout << "Thuat toan nhanh hon: " << thuat_toan_nhanh_hon(nums) << endl;
-  cout << "Thuat toan de quy: " << thuat_toan_de_quy(nums, 0, nums.size() - 1)
+  cout << "Thuat toan truc tiep: " << directAlgo(nums) << endl;
+  cout << "Thuat toan nhanh hon: " << fasterAlgo(nums) << endl;
+  cout << "Thuat toan de quy: " << recursiveAlgo(nums, 0, nums.size() - 1)
        << endl;
-  cout << "Thuat toan quy hoach dong: " << thuat_toan_quy_hoach_dong(nums)
+  cout << "Thuat toan quy hoach dong: " << dynamicProgrammingAlgo(nums)
        << endl;
 
   return 0;
