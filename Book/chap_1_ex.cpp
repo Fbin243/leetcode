@@ -34,9 +34,44 @@ int conundrum(int n) {
   return r;
 }
 
+int ex_14(int n) {
+  int count = 0;
+  for (int i = 1; i <= n / 2; i++)
+    for (int j = i; j <= n - i; j++)
+      for (int k = 1; k <= j; k++) {
+        printf("Hello");
+        count++;
+      }
+  return count;
+}
+
+vector<vector<int>> multiply_matrix(vector<vector<int>>& A,
+                                    vector<vector<int>>& B) {
+  int x = A.size();
+  int y = A[0].size();
+  int z = B[0].size();
+  vector<vector<int>> C(x, vector<int>(z, 0));
+  for (int i = 0; i < x; i++) {
+    for (int k = 0; k < z; k++) {
+      for (int j = 0; j < y; j++) {
+        C[i][k] += A[i][j] * B[j][k];
+      }
+      cout << C[i][k] << " ";
+    }
+    cout << endl;
+  }
+
+  return C;
+}
+
 int main() {
   cout << mystery(10) << endl;
   cout << pesky(10) << endl;
   cout << prestiferous(10) << endl;
-  cout << conundrum(10) << endl;
+  cout << conundrum(4) << endl;
+  cout << ex_14(10) << endl;
+
+  vector<vector<int>> A = {{1, 0, 1}, {2, 1, 0}};
+  vector<vector<int>> B = {{1, 3}, {5, 1}, {1, 0}};
+  multiply_matrix(A, B);
 }
