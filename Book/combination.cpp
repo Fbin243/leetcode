@@ -1,11 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Time: O(2^n)
+ * Space: O(n)
+ */
 int C_n_k(int n, int k) {
   if (k == n || k == 0) return 1;
   return C_n_k(n - 1, k) + C_n_k(n - 1, k - 1);
 }
 
+/**
+ * Time: O(nk)
+ * Space: O(nk)
+ */
 int C_n_k_memo(vector<vector<int>>& memo, int n, int k) {
   if (memo[n][k] > 0) return memo[n][k];
   if (k == n || k == 0)
@@ -15,6 +23,10 @@ int C_n_k_memo(vector<vector<int>>& memo, int n, int k) {
   return memo[n][k];
 }
 
+/**
+ * Time: O(k)
+ * Space: O(1)
+ */
 int C_n_k_iter(int n, int k) {
   int ans = 1;
   for (int i = 1; i <= k; i++) {
