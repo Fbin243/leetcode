@@ -10,9 +10,12 @@ struct Node {
 void InsertNode(Node*& head, Node*& tail, int val) {
   Node* newNode = new Node(val, head);
   // Node* newNode2 = new Node{val, head};
-  if (!head) head = tail = newNode;
-  tail->next = newNode;
-  tail = newNode;
+  if (!head)
+    head = tail = newNode;
+  else {
+    tail->next = newNode;
+    tail = newNode;
+  }
 }
 
 int Count(Node* ptr) {

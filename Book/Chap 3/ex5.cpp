@@ -9,11 +9,12 @@ struct Node {
 
 void InsertNode(Node*& head, Node*& tail, int val) {
   Node* newNode = new Node(val);
-  if (!head) {
+  if (!head)
     head = tail = newNode;
+  else {
+    tail->next = newNode;
+    tail = newNode;
   }
-  tail->next = newNode;
-  tail = newNode;
 }
 
 void RemoveNode(Node*& head, Node*& tail, Node* removeNode) {

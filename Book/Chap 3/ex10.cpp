@@ -8,9 +8,12 @@ struct Node {
 
 void InsertNode(Node*& head, Node*& tail, int val) {
   Node* newNode = new Node{val, nullptr};
-  if (!head) head = tail = newNode;
-  tail->next = newNode;
-  tail = newNode;
+  if (!head)
+    head = tail = newNode;
+  else {
+    tail->next = newNode;
+    tail = newNode;
+  }
 }
 
 void Destroy(Node*& head) {
