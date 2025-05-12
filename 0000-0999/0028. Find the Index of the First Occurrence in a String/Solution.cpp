@@ -21,7 +21,7 @@ class Solution {
         j++;
       }
 
-      if (j == m) return start - m;
+      if (j == m) return i;
       i++;
     }
 
