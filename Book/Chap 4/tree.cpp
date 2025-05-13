@@ -122,14 +122,25 @@ int bai16_oddSum(TreeNode* t) {
 }
 
 // Mirror tree
-TreeNode* mirror(TreeNode* t) {
+TreeNode* bai17_mirror(TreeNode* t) {
   if (!t) return t;
-  TreeNode* temp = t->right;
-  t->right = t->left;
-  t->left = temp;
-  mirror(t->left);
-  mirror(t->right);
+  swap(t->left, t->right);
+  bai17_mirror(t->left);
+  bai17_mirror(t->right);
   return t;
+}
+
+// Calculate sum of tree
+int bai18_sum(TreeNode* t) {
+  if (!t) return 0;
+  return t->val + bai18_sum(t->left) + bai18_sum(t->right);
+}
+
+// Find maximum even number in Binary Search Tree
+int bai19_evenMax(TreeNode* t) {
+  if (!t) return -1;
+  return max(((t->val % 2) ? -1 : t->val),
+             max(bai19_evenMax(t->left), bai19_evenMax(t->right)));
 }
 
 int main() {
@@ -239,10 +250,10 @@ int main() {
   cout << endl
        << "13. Number of nodes greater than " << k
        << " is: " << bai13_countNodes(root, k);
-
   cout << endl << "14. Number of leaf nodes is: " << bai14_countLeafs(root);
-
   cout << endl << "16. Odd sum: " << bai16_oddSum(root);
+  cout << endl << "18. Sum of tree: " << bai18_sum(root);
+  cout << endl << "19. Maximum even number: " << bai19_evenMax(root);
 
   freeTree(root);
 
@@ -290,7 +301,7 @@ int main() {
   cout << endl << "15. Isometric: " << bai15_isometric(root, root2);
   cout << endl << "17. Mirror tree: ";
   cout << endl << "--- Before: " << getPostOrderStr(root);
-  mirror(root);
+  bai17_mirror(root);
   cout << endl << "--- After: " << getPostOrderStr(root);
 
   freeTree(root);
