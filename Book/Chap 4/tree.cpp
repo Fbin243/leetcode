@@ -92,6 +92,13 @@ int bai8_eval_postfix(string s) {
   return st.top();
 }
 
+// Count number of node greater than k
+int bai13_countNodes(TreeNode* t, int k) {
+  if (!t) return 0;
+  return ((t->val > k) ? 1 : 0) + bai13_countNodes(t->left, k) +
+         bai13_countNodes(t->right, k);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -169,6 +176,36 @@ int main() {
   cout << endl
        << "Postfix notion \"" << postfixStr
        << "\" has value: " << bai8_eval_postfix(postfixStr);
+
+  freeTree(root);
+
+  // --- Bai 13
+  root = new TreeNode{
+      1,
+      new TreeNode{
+          2,
+          new TreeNode{3, nullptr, nullptr},
+          new TreeNode{
+              4,
+              nullptr,
+              new TreeNode{6, nullptr, nullptr},
+          },
+      },
+      new TreeNode{
+          5,
+          new TreeNode{6, nullptr, nullptr},
+          new TreeNode{
+              7,
+              nullptr,
+              new TreeNode{8, nullptr, nullptr},
+          },
+      },
+  };
+
+  int k = 5;
+  cout << endl
+       << "Number of nodes greater than " << k
+       << " is: " << bai13_countNodes(root, k);
 
   freeTree(root);
 
