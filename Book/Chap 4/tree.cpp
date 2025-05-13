@@ -121,6 +121,17 @@ int bai16_oddSum(TreeNode* t) {
          bai16_oddSum(t->right);
 }
 
+// Mirror tree
+TreeNode* mirror(TreeNode* t) {
+  if (!t) return t;
+  TreeNode* temp = t->right;
+  t->right = t->left;
+  t->left = temp;
+  mirror(t->left);
+  mirror(t->right);
+  return t;
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -277,6 +288,11 @@ int main() {
   };
 
   cout << endl << "15. Isometric: " << bai15_isometric(root, root2);
+  cout << endl << "17. Mirror tree: ";
+  cout << endl << "--- Before: " << getPostOrderStr(root);
+  mirror(root);
+  cout << endl << "--- After: " << getPostOrderStr(root);
+
   freeTree(root);
   freeTree(root2);
 
