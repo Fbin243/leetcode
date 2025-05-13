@@ -114,6 +114,13 @@ bool bai15_isometric(TreeNode* t1, TreeNode* t2) {
          bai15_isometric(t1->right, t2->right);
 }
 
+// Calculate sum of odd nodes
+int bai16_oddSum(TreeNode* t) {
+  if (!t) return 0;
+  return (t->val % 2 ? t->val : 0) + bai16_oddSum(t->left) +
+         bai16_oddSum(t->right);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -189,12 +196,12 @@ int main() {
 
   string postfixStr = getPostOrderStr(root);
   cout << endl
-       << "Postfix notion \"" << postfixStr
+       << "8. Postfix notion \"" << postfixStr
        << "\" has value: " << bai8_eval_postfix(postfixStr);
 
   freeTree(root);
 
-  // --- Bai 13 & 14
+  // --- Bai 13 & 14 & 16
   root = new TreeNode{
       1,
       new TreeNode{
@@ -219,10 +226,12 @@ int main() {
 
   int k = 5;
   cout << endl
-       << "Number of nodes greater than " << k
+       << "13. Number of nodes greater than " << k
        << " is: " << bai13_countNodes(root, k);
 
-  cout << endl << "Number of leaf nodes is: " << bai14_countLeafs(root);
+  cout << endl << "14. Number of leaf nodes is: " << bai14_countLeafs(root);
+
+  cout << endl << "16. Odd sum: " << bai16_oddSum(root);
 
   freeTree(root);
 
@@ -267,7 +276,7 @@ int main() {
       },
   };
 
-  cout << endl << "Isometric: " << bai15_isometric(root, root2);
+  cout << endl << "15. Isometric: " << bai15_isometric(root, root2);
   freeTree(root);
   freeTree(root2);
 
