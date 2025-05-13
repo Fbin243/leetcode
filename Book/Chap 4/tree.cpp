@@ -99,6 +99,13 @@ int bai13_countNodes(TreeNode* t, int k) {
          bai13_countNodes(t->right, k);
 }
 
+// Count number of leaf node
+int bai14_countLeafs(TreeNode* t) {
+  if (!t) return 0;
+  return ((!t->left && !t->right) ? 1 : 0) + bai14_countLeafs(t->left) +
+         bai14_countLeafs(t->right);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -179,7 +186,7 @@ int main() {
 
   freeTree(root);
 
-  // --- Bai 13
+  // --- Bai 13 & 14
   root = new TreeNode{
       1,
       new TreeNode{
@@ -187,7 +194,7 @@ int main() {
           new TreeNode{3, nullptr, nullptr},
           new TreeNode{
               4,
-              nullptr,
+              new TreeNode{5, nullptr, nullptr},
               new TreeNode{6, nullptr, nullptr},
           },
       },
@@ -206,6 +213,8 @@ int main() {
   cout << endl
        << "Number of nodes greater than " << k
        << " is: " << bai13_countNodes(root, k);
+
+  cout << endl << "Number of leaf nodes is: " << bai14_countLeafs(root);
 
   freeTree(root);
 
