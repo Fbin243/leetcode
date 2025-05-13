@@ -106,6 +106,14 @@ int bai14_countLeafs(TreeNode* t) {
          bai14_countLeafs(t->right);
 }
 
+// Check if two trees are isometric
+bool bai15_isometric(TreeNode* t1, TreeNode* t2) {
+  if (!t1 && !t2) return true;
+  if ((t1 && !t2) || (!t1 && t2)) return false;
+  return bai15_isometric(t1->left, t2->left) &&
+         bai15_isometric(t1->right, t2->right);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -217,6 +225,51 @@ int main() {
   cout << endl << "Number of leaf nodes is: " << bai14_countLeafs(root);
 
   freeTree(root);
+
+  // --- Bai 15
+  root = new TreeNode{
+      'a',
+      new TreeNode{
+          'b',
+          new TreeNode{
+              'd',
+              nullptr,
+              new TreeNode{'f', nullptr, nullptr},
+          },
+      },
+      new TreeNode{
+          'c',
+          new TreeNode{
+              'e',
+              nullptr,
+              new TreeNode{'g', nullptr, nullptr},
+          },
+      },
+  };
+
+  TreeNode* root2 = new TreeNode{
+      'a',
+      new TreeNode{
+          'b',
+          new TreeNode{
+              'd',
+              nullptr,
+              new TreeNode{'f', nullptr, nullptr},
+          },
+      },
+      new TreeNode{
+          'c',
+          new TreeNode{
+              'e',
+              new TreeNode{'g', nullptr, nullptr},
+              nullptr,
+          },
+      },
+  };
+
+  cout << endl << "Isometric: " << bai15_isometric(root, root2);
+  freeTree(root);
+  freeTree(root2);
 
   return 0;
 }
