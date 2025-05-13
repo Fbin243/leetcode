@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 using namespace std;
 
 struct TreeNode {
@@ -30,6 +31,11 @@ void printPostorder(TreeNode* t) {
   cout << t->val << " ";
 }
 
+string getPostOrderStr(TreeNode* t) {
+  if (!t) return "";
+  return getPostOrderStr(t->left) + getPostOrderStr(t->right) + t->val;
+}
+
 // Inorder = LNR
 void printInorder(TreeNode* t) {
   if (!t) return;
@@ -46,6 +52,44 @@ int countNodes(TreeNode* t) {
 int depth(TreeNode* t) {
   if (!t) return -1;
   return 1 + max(depth(t->left), depth(t->right));
+}
+
+void bai7(TreeNode* t) {
+  if (!t) return;
+  cout << t->val;
+  bai7(t->left);
+  bai7(t->right);
+  cout << t->val;
+}
+
+int bai8_eval_exp(int or1, int or2, char op) {
+  switch (op) {
+    case '+':
+      return or1 + or2;
+    case '-':
+      return or1 - or2;
+    case '*':
+      return or1 * or2;
+    default:
+      return or1 / or2;
+  }
+}
+
+int bai8_eval_postfix(string s) {
+  stack<int> st;
+  for (char c : s) {
+    if (isalnum(c)) {
+      st.push(c - '0');
+    } else {
+      int or2 = st.top();
+      st.pop();
+      int or1 = st.top();
+      st.pop();
+      st.push(bai8_eval_exp(or1, or2, c));
+    }
+  }
+
+  return st.top();
 }
 
 int main() {
@@ -74,6 +118,57 @@ int main() {
 
   cout << "Number of nodes: " << countNodes(root) << endl;
   cout << "Depth of tree: " << depth(root) << endl;
+
+  freeTree(root);
+
+  // --- Bai 7
+  root = new TreeNode{
+      'a',
+      new TreeNode{
+          'b',
+          new TreeNode{'c', nullptr, nullptr},
+          new TreeNode{'a', nullptr, nullptr},
+      },
+      new TreeNode{
+          'e',
+          new TreeNode{'f', nullptr, nullptr},
+          new TreeNode{'g', nullptr, nullptr},
+      },
+  };
+
+  bai7(root);
+
+  freeTree(root);
+
+  // --- Bai 8
+  root = new TreeNode{
+      '/',
+      new TreeNode{'+',
+                   new TreeNode{
+                       '/',
+                       new TreeNode{'9', nullptr, nullptr},
+                       new TreeNode{'3', nullptr, nullptr},
+                   },
+                   new TreeNode{'9', nullptr, nullptr}},
+      new TreeNode{
+          '/',
+          new TreeNode{'8', nullptr, nullptr},
+          new TreeNode{
+              '*',
+              new TreeNode{'2', nullptr, nullptr},
+              new TreeNode{
+                  '-',
+                  new TreeNode{'4', nullptr, nullptr},
+                  new TreeNode{'2', nullptr, nullptr},
+              },
+          },
+      },
+  };
+
+  string postfixStr = getPostOrderStr(root);
+  cout << endl
+       << "Postfix notion \"" << postfixStr
+       << "\" has value: " << bai8_eval_postfix(postfixStr);
 
   freeTree(root);
 
