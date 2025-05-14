@@ -196,6 +196,13 @@ int bai24_evenLeaf(TreeNode* t) {
          bai24_evenLeaf(t->left) + bai24_evenLeaf(t->right);
 }
 
+// Check if u is an ancestor of v
+bool ex11_isAncestor(TreeNode* u, TreeNode* v) {
+  if (!u || !v) return false;
+  if (u == v) return true;
+  return ex11_isAncestor(u->left, v) || ex11_isAncestor(u->right, v);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -277,6 +284,8 @@ int main() {
   freeTree(root);
 
   // --- Bai 13 & 14 & 16
+  TreeNode* v = new TreeNode{2, nullptr, nullptr};
+  TreeNode* u = new TreeNode{1, v, nullptr};
   root = new TreeNode{
       1,
       new TreeNode{
@@ -293,7 +302,7 @@ int main() {
           new TreeNode{6, nullptr, nullptr},
           new TreeNode{
               7,
-              nullptr,
+              u,
               new TreeNode{8, nullptr, nullptr},
           },
       },
@@ -313,6 +322,7 @@ int main() {
        << "22. All keys smaller than " << key
        << " is: " << bai22_isLeft(root, key);
   cout << endl << "24. Number of even leaf nodes: " << bai24_evenLeaf(root);
+  cout << endl << "Ex11. u is an ancestor of v: " << ex11_isAncestor(u, v);
 
   freeTree(root);
 
