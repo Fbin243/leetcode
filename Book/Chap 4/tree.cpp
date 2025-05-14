@@ -189,6 +189,13 @@ bool bai22_isLeft(TreeNode* t, int key) {
   return bai22_isLeft(t->left, key) && bai22_isLeft(t->right, key);
 }
 
+// Count number of even leaf nodes
+int bai24_evenLeaf(TreeNode* t) {
+  if (!t) return 0;
+  return (!t->left && !t->right && (t->val % 2 == 0)) +
+         bai24_evenLeaf(t->left) + bai24_evenLeaf(t->right);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -305,6 +312,7 @@ int main() {
   cout << endl
        << "22. All keys smaller than " << key
        << " is: " << bai22_isLeft(root, key);
+  cout << endl << "24. Number of even leaf nodes: " << bai24_evenLeaf(root);
 
   freeTree(root);
 
