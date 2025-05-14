@@ -182,6 +182,13 @@ int bai21_BT_Diam(TreeNode* t) {
   return diam;
 }
 
+// All keys in tree is smaller than key
+bool bai22_isLeft(TreeNode* t, int key) {
+  if (!t) return true;
+  if (t->val >= key) return false;
+  return bai22_isLeft(t->left, key) && bai22_isLeft(t->right, key);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -286,6 +293,7 @@ int main() {
   };
 
   int k = 5;
+  int key = 9;
   cout << endl
        << "13. Number of nodes greater than " << k
        << " is: " << bai13_countNodes(root, k);
@@ -294,6 +302,9 @@ int main() {
   cout << endl << "18. Sum of tree: " << bai18_sum(root);
   cout << endl << "19. Maximum even number: " << bai19_evenMax(root);
   cout << endl << "21. Diameter of tree: " << bai21_BT_Diam(root);
+  cout << endl
+       << "22. All keys smaller than " << key
+       << " is: " << bai22_isLeft(root, key);
 
   freeTree(root);
 
