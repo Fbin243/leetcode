@@ -158,6 +158,30 @@ bool bai20_isBBT(TreeNode* t) {
   return balanced;
 }
 
+// Find the diameter of tree
+int find_diam_edges(TreeNode* t, int& diam) {
+  if (!t) return -1;
+  int leftHeight = find_diam_edges(t->left, diam);
+  int rightHeight = find_diam_edges(t->right, diam);
+  diam = max(diam, 2 + leftHeight + rightHeight);
+  return 1 + max(leftHeight, rightHeight);
+}
+
+// If you define the path length is number of nodes
+int find_diam_nodes(TreeNode* t, int& diam) {
+  if (!t) return 0;
+  int leftHeight = find_diam_nodes(t->left, diam);
+  int rightHeight = find_diam_nodes(t->right, diam);
+  diam = max(diam, 1 + leftHeight + rightHeight);
+  return 1 + max(leftHeight, rightHeight);
+}
+
+int bai21_BT_Diam(TreeNode* t) {
+  int diam = 0;
+  find_diam_edges(t, diam);
+  return diam;
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -269,6 +293,7 @@ int main() {
   cout << endl << "16. Odd sum: " << bai16_oddSum(root);
   cout << endl << "18. Sum of tree: " << bai18_sum(root);
   cout << endl << "19. Maximum even number: " << bai19_evenMax(root);
+  cout << endl << "21. Diameter of tree: " << bai21_BT_Diam(root);
 
   freeTree(root);
 
