@@ -221,6 +221,15 @@ TreeNode* buildTreeFromPostfixNotation(string postfixStr) {
   return st.top();
 }
 
+// Find nearest common ancestor of u and v
+TreeNode* ex19_nearestCommonAncestor(TreeNode* root, TreeNode* u, TreeNode* v) {
+  if (!root || root == u || root == v) return root;
+  TreeNode* left = ex19_nearestCommonAncestor(root->left, u, v);
+  TreeNode* right = ex19_nearestCommonAncestor(root->right, u, v);
+  if (left && right) return root;
+  return left ? left : right;
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -399,6 +408,29 @@ int main() {
   root = buildTreeFromPostfixNotation("93/9+8242-*//");
   cout << endl << "Ex18. Build tree from postfix notation: ";
   printPostorder(root);
+  freeTree(root);
+
+  // --- Ex 19: Find the nearest common ancestor of u and v
+  v = new TreeNode{'2', nullptr, nullptr};
+  u = new TreeNode{'1', nullptr, v};
+  root = new TreeNode{
+      '0',
+      new TreeNode{'3', nullptr, nullptr},
+      new TreeNode{
+          '4',
+          u,
+          new TreeNode{
+              '5',
+              nullptr,
+              new TreeNode{'6', nullptr, nullptr},
+          },
+      },
+  };
+  TreeNode* ancestor = ex19_nearestCommonAncestor(root, u, v);
+  cout << endl
+       << "19. The nearest common ancestor of u and v is: "
+       << (ancestor ? ancestor->val : '#');
+
   freeTree(root);
 
   return 0;
