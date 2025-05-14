@@ -203,6 +203,24 @@ bool ex11_isAncestor(TreeNode* u, TreeNode* v) {
   return ex11_isAncestor(u->left, v) || ex11_isAncestor(u->right, v);
 }
 
+// Build Tree from a postfix notation
+TreeNode* buildTreeFromPostfixNotation(string postfixStr) {
+  stack<TreeNode*> st;
+  for (char c : postfixStr) {
+    if (isalnum(c)) {
+      st.push(new TreeNode{c, nullptr, nullptr});
+    } else {
+      TreeNode* or2 = st.top();
+      st.pop();
+      TreeNode* or1 = st.top();
+      st.pop();
+      st.push(new TreeNode{c, or1, or2});
+    }
+  }
+
+  return st.top();
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -376,6 +394,12 @@ int main() {
 
   freeTree(root);
   freeTree(root2);
+
+  // --- Ex 18: Build tree from postfix notation
+  root = buildTreeFromPostfixNotation("93/9+8242-*//");
+  cout << endl << "Ex18. Build tree from postfix notation: ";
+  printPostorder(root);
+  freeTree(root);
 
   return 0;
 }
