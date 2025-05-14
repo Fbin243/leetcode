@@ -230,6 +230,15 @@ TreeNode* ex19_nearestCommonAncestor(TreeNode* root, TreeNode* u, TreeNode* v) {
   return left ? left : right;
 }
 
+// Print all sums of all paths from root to leafs
+void ex20_printPathSums(TreeNode* t, int currentSum) {
+  if (!t) return;
+  currentSum += t->val;
+  if (!t->left && !t->right) cout << currentSum << " ";
+  ex20_printPathSums(t->left, currentSum);
+  ex20_printPathSums(t->right, currentSum);
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -350,6 +359,8 @@ int main() {
        << " is: " << bai22_isLeft(root, key);
   cout << endl << "24. Number of even leaf nodes: " << bai24_evenLeaf(root);
   cout << endl << "Ex11. u is an ancestor of v: " << ex11_isAncestor(u, v);
+  cout << endl << "Ex20. Path sums: ";
+  ex20_printPathSums(root, 0);
 
   freeTree(root);
 
@@ -428,7 +439,7 @@ int main() {
   };
   TreeNode* ancestor = ex19_nearestCommonAncestor(root, u, v);
   cout << endl
-       << "19. The nearest common ancestor of u and v is: "
+       << "Ex19. The nearest common ancestor of u and v is: "
        << (ancestor ? ancestor->val : '#');
 
   freeTree(root);
