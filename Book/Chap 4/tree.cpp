@@ -143,6 +143,21 @@ int bai19_evenMax(TreeNode* t) {
              max(bai19_evenMax(t->left), bai19_evenMax(t->right)));
 }
 
+// Check if the tree is balanced
+int checkBalanced(TreeNode* t, bool& balanced) {
+  if (!t) return 0;
+  int leftHeight = checkBalanced(t->left, balanced);
+  int rightHeight = checkBalanced(t->right, balanced);
+  if (abs(leftHeight - rightHeight) > 1) balanced = false;
+  return 1 + max(leftHeight, rightHeight);
+}
+
+bool bai20_isBBT(TreeNode* t) {
+  bool balanced = true;
+  checkBalanced(t, balanced);
+  return balanced;
+}
+
 int main() {
   TreeNode* root = new TreeNode{
       'a',
@@ -303,6 +318,7 @@ int main() {
   cout << endl << "--- Before: " << getPostOrderStr(root);
   bai17_mirror(root);
   cout << endl << "--- After: " << getPostOrderStr(root);
+  cout << endl << "20. Is Balanced Tree: " << bai20_isBBT(root);
 
   freeTree(root);
   freeTree(root2);
