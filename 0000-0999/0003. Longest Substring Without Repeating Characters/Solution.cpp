@@ -29,3 +29,28 @@ class Solution {
     return res;
   }
 };
+
+// --- Solution at 23/05/2025
+class Solution {
+ public:
+  /**
+   * Two pointers (Sliding window)
+   * Time: O(n)
+   * Space: O(1)
+   */
+  int lengthOfLongestSubstring(string s) {
+    unordered_set<char> seen;
+    int maxLen = 0, len = 0, l = 0, r = 0;
+    while (r < s.length()) {
+      while (seen.count(s[r])) {
+        seen.erase(s[l++]);
+        len--;
+      }
+      seen.insert(s[r++]);
+      len++;
+      maxLen = max(maxLen, len);
+    }
+
+    return maxLen;
+  }
+};
