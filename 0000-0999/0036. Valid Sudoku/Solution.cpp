@@ -24,7 +24,7 @@ class Solution {
    * -- 0, 1, 2
    * -- 3, 4, 5
    * -- 6, 7, 8
-	 * 
+   *
    * You can see that the int is incremented by 3 when going down, and
    * incremented by 1 when going to the right. So (r / 3) * 3 - is for going
    * down (c / 3) * 1 - is for going to the right. You'll get (r / 3 ) * 3 + (c
@@ -55,6 +55,33 @@ class Solution {
         rowm[i].insert(board[i][j]);
         colm[j].insert(board[i][j]);
         boxm[boxIdx].insert(board[i][j]);
+      }
+    }
+
+    return true;
+  }
+};
+
+// --- Solution at 22/05/2025
+class Solution {
+ public:
+  bool isValidSudoku(vector<vector<char>>& board) {
+    int n = board.size();
+    int m = sqrt(n);
+    vector<unordered_set<int>> row(n);
+    vector<unordered_set<int>> col(n);
+    vector<unordered_set<int>> sqr(n);
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        if (isdigit(board[i][j])) {
+          int k = (i / m) * m + (j / m);
+          if (row[i].count(board[i][j]) || col[j].count(board[i][j]) ||
+              sqr[k].count(board[i][j]))
+            return false;
+          row[i].insert(board[i][j]);
+          col[j].insert(board[i][j]);
+          sqr[k].insert(board[i][j]);
+        }
       }
     }
 
