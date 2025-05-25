@@ -18,14 +18,14 @@ using namespace std;
  * Space complexity: O(n)
  */
 
-class MinStack {
+class MinStack1 {
   int min_arr[30000];
   int top_min_idx;
   int arr[30000];
   int top_idx;
 
  public:
-  MinStack() {
+  MinStack1() {
     top_idx = -1;
     top_min_idx = -1;
   }
@@ -58,8 +58,34 @@ class MinStack {
   }
 };
 
+/**
+ * Solution at 25/05/2025
+ */
+class MinStack {
+ private:
+  stack<int> st;
+  stack<int> minSt;
+
+ public:
+  MinStack() {}
+
+  void push(int val) {
+    if (minSt.empty() || (minSt.top() >= val)) minSt.push(val);
+    st.push(val);
+  }
+
+  void pop() {
+    if (!minSt.empty() && (minSt.top() == st.top())) minSt.pop();
+    st.pop();
+  }
+
+  int top() { return st.top(); }
+
+  int getMin() { return minSt.top(); }
+};
+
 int main() {
-  MinStack* minSt = new MinStack();
+  MinStack1* minSt = new MinStack1();
   minSt->push(-2);
   minSt->push(0);
   minSt->push(-3);
