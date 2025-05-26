@@ -35,6 +35,36 @@ class Solution {
   }
 };
 
+// -- Solution at 26/05/2025
+class Solution {
+ public:
+  int search(vector<int>& nums, int target) {
+    int l = 0, r = nums.size() - 1;
+    while (l <= r) {
+      int m = l + (r - l) / 2;
+      if (nums[m] == target) return m;
+
+      // Left sorted portion
+      if (nums[m] >= nums[l]) {
+        if (nums[m] < target || target < nums[l]) {
+          l = m + 1;
+        } else {
+          r = m - 1;
+        }
+        // Right sorted portion
+      } else {
+        if (nums[m] > target || target > nums[r]) {
+          r = m - 1;
+        } else {
+          l = m + 1;
+        }
+      }
+    }
+
+    return -1;
+  }
+};
+
 int main() {
   Solution s;
   vector<int> nums = {4, 5, 6, 7, 0, 1, 2};
