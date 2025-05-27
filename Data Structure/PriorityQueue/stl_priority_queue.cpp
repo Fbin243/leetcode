@@ -22,10 +22,9 @@ int main() {
 
   // Init a queue from other container
   vector<int> v = {9, 10, 8, 6};
-  priority_queue<int> pq2(v.begin(), v.end());
-  priority_queue<int> pq3 = {v.begin(), v.end()};
+  priority_queue<int> pq2;
+  pq2 = {v.begin(), v.end()};
   print(pq2);
-  print(pq3);
 
   // Delete elements
   pq.pop();
