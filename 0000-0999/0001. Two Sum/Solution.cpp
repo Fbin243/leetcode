@@ -1,10 +1,13 @@
-/**
+/*
  * Author: Fbin
  * Link:https://leetcode.com/problems/two-sum/?envType=problem-list-v2&envId=array
  * Created at: 08/03/2025
  */
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 /**
@@ -22,28 +25,28 @@ using namespace std;
  * We can reduce a loop of Brute Force way by using hash table.
  * Iterate through the array once, and for each element x, check if target - x
  * exists in the hashtable
- * 
+ *
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
 
-vector<int> twoSum(vector<int>& nums, int target) {
-    unordered_map<int, int> seen;
-    for (int i = 0; i < nums.size(); i++) {
-        if (seen.find(target - nums[i]) != seen.end()) {
-            return vector<int>{seen[target - nums[i]], i};
-        }
-        seen[nums[i]] = i;
+vector<int> twoSum(vector<int> &nums, int target) {
+  unordered_map<int, int> seen;
+  for (int i = 0; i < nums.size(); i++) {
+    if (seen.find(target - nums[i]) != seen.end()) {
+      return vector<int>{seen[target - nums[i]], i};
     }
+    seen[nums[i]] = i;
+  }
 
-    return vector<int>{};
+  return vector<int>{};
 }
 
 int main() {
-    vector<int> nums = {2, 7, 11, 15};
-    int target = 9;
-    vector<int> result = twoSum(nums, target);
-    cout << "Result: " << result[0] << " " << result[1] << endl;
+  vector<int> nums = {2, 7, 11, 15};
+  int target = 9;
+  vector<int> result = twoSum(nums, target);
+  cout << "Result: " << result[0] << " " << result[1] << endl;
 
-    return 0;
+  return 0;
 }
