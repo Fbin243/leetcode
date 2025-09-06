@@ -10,3 +10,6 @@ new:
 	@echo "" >> "${dir}"/Solution.cpp
 	@echo "#include <bits/stdc++.h>" >> "${dir}"/Solution.cpp
 	@echo "using namespace std;" >> "${dir}"/Solution.cpp
+
+run:
+	@g++ -I. "${dir}/Solution.cpp"; ./a.out
