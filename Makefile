@@ -8,7 +8,7 @@ new:
 	@echo "* Created at: $(shell date '+%d/%m/%Y')" >> "${dir}"/Solution.cpp
 	@echo "*/" >> "${dir}"/Solution.cpp
 	@echo "" >> "${dir}"/Solution.cpp
-	@echo "#include <bits/stdc++.h>" >> "${dir}"/Solution.cpp
+	@echo "#include <fbin/leetcode.h>" >> "${dir}"/Solution.cpp
 	@echo "using namespace std;" >> "${dir}"/Solution.cpp
 
 run:
