@@ -9,7 +9,6 @@ new:
 	@echo "*/" >> "${dir}"/Solution.cpp
 	@echo "" >> "${dir}"/Solution.cpp
 	@echo "#include <fbin/leetcode.h>" >> "${dir}"/Solution.cpp
-	@echo "using namespace std;" >> "${dir}"/Solution.cpp
 
 run:
 	@g++ -I. "${dir}/Solution.cpp"; ./a.out
