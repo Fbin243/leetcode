@@ -19,5 +19,7 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
+#include <list>
+#include <forward_list>
 
 using namespace std;
