@@ -2,7 +2,7 @@
  * Author: Fbin
  * Created at: 25/04/2025
  * Link:https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150
- * Goal: Zalo Tech Freshers 2025
+ * Goal: Zalopay Tech Freshers 2025
  */
 function canCompleteCircuit(gas: number[], cost: number[]): number {
   let min_idx = 0;

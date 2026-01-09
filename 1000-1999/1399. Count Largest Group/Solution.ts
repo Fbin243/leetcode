@@ -2,7 +2,7 @@
  * Author: Fbin
  * Created at: 23/04/2025
  * Link:https://leetcode.com/problems/count-largest-group/description/?envType=daily-question&envId=2025-04-23
- * Goal: Zalo Tech Freshers 2025
+ * Goal: Zalopay Tech Freshers 2025
  */
 
 function countLargestGroup(n: number): number {
