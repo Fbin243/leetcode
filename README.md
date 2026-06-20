@@ -1,6 +1,3 @@
-# leetcode
-Trying hard on leetcode in a serious manner
-
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Math
