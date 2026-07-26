@@ -7,6 +7,7 @@
 | [1344-angle-between-hands-of-a-clock](https://github.com/Fbin243/leetcode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/Fbin243/leetcode/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
+| [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/Fbin243/leetcode/tree/main/3754-concatenate-non-zero-digits-and-multiply-by-sum-i/) | Easy |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
