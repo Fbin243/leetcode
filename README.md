@@ -18,6 +18,7 @@
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Simulation
@@ -33,6 +34,7 @@
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Greedy
 | Problem Name | Difficulty |
@@ -50,4 +52,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
