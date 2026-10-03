@@ -19,6 +19,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
+| [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Simulation
@@ -56,4 +57,13 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
+| [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+## Backtracking
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 <!---LeetCode Topics End-->
