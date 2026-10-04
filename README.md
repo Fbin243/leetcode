@@ -11,6 +11,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
@@ -66,4 +67,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
 <!---LeetCode Topics End-->
