@@ -1,28 +1,17 @@
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        max_len = left = right = 0
+        stack = [-1]  # Mốc cơ sở ban đầu (chỉ số -1 giúp tính đúng độ dài từ đầu chuỗi)
+        max_len = 0
         
-        # Duyệt từ trái sang phải
-        for char in s:
+        for i, char in enumerate(s):
             if char == '(':
-                left += 1
+                stack.append(i)  # Đẩy chỉ số của '(' vào stack
             else:
-                right += 1
-            if left == right:
-                max_len = max(max_len, 2 * right)
-            elif right > left:  # Nhiều đóng hơn mở => reset
-                left = right = 0
-                
-        # Duyệt từ phải sang trái (để xử lý trường hợp nhiều mở hơn đóng)
-        left = right = 0
-        for char in reversed(s):
-            if char == '(':
-                left += 1
-            else:
-                right += 1
-            if left == right:
-                max_len = max(max_len, 2 * left)
-            elif left > right:  # Nhiều mở hơn đóng => reset
-                left = right = 0
-                
+                stack.pop()  # Gặp ')' -> pop ra 1 '(' (xử lý 1 cặp hợp lệ)
+                if not stack:
+                    stack.append(i)  # Stack rỗng => cập nhật mốc cơ sở mới cho chuỗi tiếp theo
+                else:
+                    # Độ dài chuỗi hợp lệ hiện tại = chỉ số hiện tại - chỉ số trên đỉnh stack
+                    max_len = max(max_len, i - stack[-1])
+                    
         return max_len
