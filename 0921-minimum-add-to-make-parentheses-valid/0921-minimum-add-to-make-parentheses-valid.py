@@ -1,16 +1,17 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        open_count = 0  # Số '(' chưa được ghép cặp
-        close_count = 0 # Số ')' không thể ghép với '(' trước đó
+        open_count = 0   # số "(" chưa được match
+        added = 0        # số ")" thừa (cần thêm "(" trước đó)
         
-        for char in s:
-            if char == '(':
+        for ch in s:
+            if ch == '(':
                 open_count += 1
-            else:
+            else:  # ch == ')'
                 if open_count > 0:
-                    open_count -= 1  # Ghép cặp với '(' chưa đóng
+                    open_count -= 1   # match với 1 "(" trước đó
                 else:
-                    close_count += 1 # ')' dư, cần thêm '(' phía trước
-                    
-        return open_count + close_count
-
+                    added += 1        # không có "(" để match → cần thêm 1 "("
+        
+        # open_count: số "(" thừa → cần thêm ")"
+        # added: số ")" thừa → cần thêm "("
+        return open_count + added
