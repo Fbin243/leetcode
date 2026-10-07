@@ -1,45 +1,51 @@
 class Solution:
-    def removeInvalidParentheses(self, s: str) -> list[str]:
-        # Count the minimum number of '(' and ')' that must be removed
-        rem_l = rem_r = 0
-        for c in s:
-            if c == '(':
-                rem_l += 1
-            elif c == ')':
-                if rem_l:
-                    rem_l -= 1
+    def removeInvalidParentheses(self, s: str) -> List[str]:
+        # --- Đếm số ký tự cần xoá ---
+        remove_open, remove_close, balance = 0, 0, 0
+        for ch in s:
+            if ch == '(':
+                balance += 1
+            elif ch == ')':
+                if balance > 0:
+                    balance -= 1
                 else:
-                    rem_r += 1
+                    remove_close += 1
+        remove_open = balance
 
-        n = len(s)
-        res = set()
+        result = []
+        seen = set()  # dedup
 
-        def dfs(i: int, l: int, r: int, open_: int, path: list[str]) -> None:
-            if l + r > n - i:          # not enough chars left to remove
-                return
-            if i == n:
-                if l == 0 and r == 0 and open_ == 0:
-                    res.add("".join(path))
+        def dfs(i, left, cur, ro, rc):
+            # Pruning: vượt budget xoá, hoặc balance âm
+            if ro < 0 or rc < 0 or left < 0:
                 return
 
-            c = s[i]
-            if c == '(':
-                if l > 0:                              # remove it
-                    dfs(i + 1, l - 1, r, open_, path)
-                path.append(c)                         # keep it
-                dfs(i + 1, l, r, open_ + 1, path)
-                path.pop()
-            elif c == ')':
-                if r > 0:                              # remove it
-                    dfs(i + 1, l, r - 1, open_, path)
-                if open_ > 0:                          # keep it only if it matches
-                    path.append(c)
-                    dfs(i + 1, l, r, open_ - 1, path)
-                    path.pop()
-            else:                                      # letters are always kept
-                path.append(c)
-                dfs(i + 1, l, r, open_, path)
-                path.pop()
+            if i == len(s):
+                if ro == 0 and rc == 0 and left == 0:
+                    if cur not in seen:
+                        seen.add(cur)
+                        result.append(cur)
+                return
 
-        dfs(0, rem_l, rem_r, 0, [])
-        return list(res)
+            ch = s[i]
+
+            if ch == '(':
+                # Option A: xoá
+                if ro > 0:
+                    dfs(i + 1, left, cur, ro - 1, rc)
+                # Option B: giữ
+                dfs(i + 1, left + 1, cur + ch, ro, rc)
+
+            elif ch == ')':
+                # Option A: xoá
+                if rc > 0:
+                    dfs(i + 1, left, cur, ro, rc - 1)
+                # Option B: giữ (chỉ nếu còn ( để match)
+                if left > 0:
+                    dfs(i + 1, left - 1, cur + ch, ro, rc)
+
+            else:  # ký tự bình thường → luôn giữ
+                dfs(i + 1, left, cur + ch, ro, rc)
+
+        dfs(0, 0, "", remove_open, remove_close)
+        return result
