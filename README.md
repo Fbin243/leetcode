@@ -26,6 +26,7 @@
 | [0856-score-of-parentheses](https://github.com/Fbin243/leetcode/tree/main/0856-score-of-parentheses/) | Medium |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/Fbin243/leetcode/tree/main/0921-minimum-add-to-make-parentheses-valid/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+| [1111-maximum-nesting-depth-of-two-valid-parentheses-strings](https://github.com/Fbin243/leetcode/tree/main/1111-maximum-nesting-depth-of-two-valid-parentheses-strings/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Simulation
 | Problem Name | Difficulty |
@@ -45,6 +46,7 @@
 | [0856-score-of-parentheses](https://github.com/Fbin243/leetcode/tree/main/0856-score-of-parentheses/) | Medium |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/Fbin243/leetcode/tree/main/0921-minimum-add-to-make-parentheses-valid/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+| [1111-maximum-nesting-depth-of-two-valid-parentheses-strings](https://github.com/Fbin243/leetcode/tree/main/1111-maximum-nesting-depth-of-two-valid-parentheses-strings/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -70,6 +72,7 @@
 | [0032-longest-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0856-score-of-parentheses](https://github.com/Fbin243/leetcode/tree/main/0856-score-of-parentheses/) | Medium |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/Fbin243/leetcode/tree/main/0921-minimum-add-to-make-parentheses-valid/) | Medium |
+| [1111-maximum-nesting-depth-of-two-valid-parentheses-strings](https://github.com/Fbin243/leetcode/tree/main/1111-maximum-nesting-depth-of-two-valid-parentheses-strings/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
