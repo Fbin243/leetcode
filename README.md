@@ -8,6 +8,7 @@
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/Fbin243/leetcode/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
 | [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/Fbin243/leetcode/tree/main/3754-concatenate-non-zero-digits-and-multiply-by-sum-i/) | Easy |
+| [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -16,6 +17,7 @@
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
+| [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -66,6 +68,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
+| [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Bracket Sequences
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -94,4 +97,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0301-remove-invalid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0301-remove-invalid-parentheses/) | Hard |
+## Enumeration
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 <!---LeetCode Topics End-->
