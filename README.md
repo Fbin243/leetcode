@@ -18,6 +18,7 @@
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Fbin243/leetcode/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
+| [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
 | [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## String
@@ -70,6 +71,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
+| [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 | [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Bracket Sequences
 | Problem Name | Difficulty |
@@ -96,6 +98,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
+| [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
