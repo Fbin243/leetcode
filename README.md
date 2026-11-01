@@ -3,6 +3,7 @@
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1344-angle-between-hands-of-a-clock](https://github.com/Fbin243/leetcode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Fbin243/leetcode/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
@@ -14,6 +15,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Fbin243/leetcode/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
