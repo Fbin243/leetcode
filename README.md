@@ -3,6 +3,7 @@
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1344-angle-between-hands-of-a-clock](https://github.com/Fbin243/leetcode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
@@ -16,6 +17,7 @@
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
 | [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0174-dungeon-game](https://github.com/Fbin243/leetcode/tree/main/0174-dungeon-game/) | Hard |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
@@ -109,6 +111,7 @@
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
 | [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -180,4 +183,16 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
+## Geometry
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
+## Euclidean Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
+## Greatest Common Divisor
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 <!---LeetCode Topics End-->
