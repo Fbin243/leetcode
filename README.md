@@ -19,6 +19,7 @@
 | [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 | [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0174-dungeon-game](https://github.com/Fbin243/leetcode/tree/main/0174-dungeon-game/) | Hard |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
@@ -163,6 +164,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/Fbin243/leetcode/tree/main/0023-merge-k-sorted-lists/) | Hard |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -195,4 +197,20 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
+## Queue
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+## Monotonic Queue
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+## Range Minimum/Maximum Query
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 <!---LeetCode Topics End-->
