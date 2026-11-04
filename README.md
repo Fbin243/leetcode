@@ -20,6 +20,7 @@
 | [0149-max-points-on-a-line](https://github.com/Fbin243/leetcode/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0174-dungeon-game](https://github.com/Fbin243/leetcode/tree/main/0174-dungeon-game/) | Hard |
 | [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
@@ -57,6 +58,7 @@
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0020-valid-parentheses/) | Easy |
 | [0032-longest-valid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0032-longest-valid-parentheses/) | Hard |
+| [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 | [0856-score-of-parentheses](https://github.com/Fbin243/leetcode/tree/main/0856-score-of-parentheses/) | Medium |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/Fbin243/leetcode/tree/main/0921-minimum-add-to-make-parentheses-valid/) | Medium |
 | [1021-remove-outermost-parentheses](https://github.com/Fbin243/leetcode/tree/main/1021-remove-outermost-parentheses/) | Easy |
@@ -65,11 +67,13 @@
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/Fbin243/leetcode/tree/main/0921-minimum-add-to-make-parentheses-valid/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Matrix
 | Problem Name | Difficulty |
@@ -213,4 +217,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 <!---LeetCode Topics End-->
