@@ -15,6 +15,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 | [0174-dungeon-game](https://github.com/Fbin243/leetcode/tree/main/0174-dungeon-game/) | Hard |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/Fbin243/leetcode/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Fbin243/leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
@@ -70,6 +71,7 @@
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 | [0174-dungeon-game](https://github.com/Fbin243/leetcode/tree/main/0174-dungeon-game/) | Hard |
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 ## Sorting
@@ -100,11 +102,13 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/Fbin243/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 | [0301-remove-invalid-parentheses](https://github.com/Fbin243/leetcode/tree/main/0301-remove-invalid-parentheses/) | Hard |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Fbin243/leetcode/tree/main/0001-two-sum/) | Easy |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -168,4 +172,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0025-reverse-nodes-in-k-group](https://github.com/Fbin243/leetcode/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
+## Algorithm X
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
+## Dancing Links
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0037-sudoku-solver](https://github.com/Fbin243/leetcode/tree/main/0037-sudoku-solver/) | Hard |
 <!---LeetCode Topics End-->
