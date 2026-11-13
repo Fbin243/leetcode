@@ -26,6 +26,7 @@
 | [1260-shift-2d-grid](https://github.com/Fbin243/leetcode/tree/main/1260-shift-2d-grid/) | Easy |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Fbin243/leetcode/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Fbin243/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Fbin243/leetcode/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/Fbin243/leetcode/tree/main/3838-weighted-word-mapping/) | Easy |
 | [3886-sum-of-sortable-integers](https://github.com/Fbin243/leetcode/tree/main/3886-sum-of-sortable-integers/) | Hard |
@@ -64,6 +65,7 @@
 | [1021-remove-outermost-parentheses](https://github.com/Fbin243/leetcode/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 | [1111-maximum-nesting-depth-of-two-valid-parentheses-strings](https://github.com/Fbin243/leetcode/tree/main/1111-maximum-nesting-depth-of-two-valid-parentheses-strings/) | Medium |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -75,6 +77,7 @@
 | ------- | ------- |
 | [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Fbin243/leetcode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -205,14 +208,17 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 ## Monotonic Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/Fbin243/leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 ## Range Minimum/Maximum Query
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -221,4 +227,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0321-create-maximum-number](https://github.com/Fbin243/leetcode/tree/main/0321-create-maximum-number/) | Hard |
+## Segment Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3420-count-non-decreasing-subarrays-after-k-operations](https://github.com/Fbin243/leetcode/tree/main/3420-count-non-decreasing-subarrays-after-k-operations/) | Hard |
 <!---LeetCode Topics End-->
